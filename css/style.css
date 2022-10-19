@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: black;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header {
+    height: 80px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 80px;
+    width: 180px;
+}
+
+.nav__a {
+    margin: 5px;
+    color: white;
+    font-size: 13px;
+}
+
+.inicio {
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: relative;
+    background-image: url(../assets/imgfondo.jpg);
+    background-size: cover;
+}
+
+.inicio__titulo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 8%;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+}
+
+.nuestrosproductos__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nuestrosproductos__container--texto {
+    width: 50%;
+}
+
+.nuestrosproductos__container--texto h2 {
+    padding-bottom: 20px;
+}
+
+.nuestrosproductos__container--texto p {
+    padding-bottom: 10px;
+}
+
+.galeria__container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 450px;
+    position: relative;
+}
+
+.galeria__container1 {
+    width: 30%;
+    height: 450px;
+}
+
+.galeria__container1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.galeria__container2 {
+    width: 30%;
+    height: 450px;
+}
+
+.galeria__container2 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.galeria__container3 {
+    width: 30%;
+    height: 450px;
+}
+
+.galeria__container3--1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 223px;
+}
+
+.galeria__container3--2 img {
+    object-fit: cover;
+    width: 100%;
+    height: 223px;
+}
+
+.tiendaonline__container {
+    padding-top: 30px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.tiendaonline__container input {
+    margin-left: 7px;
+}
+
+.filtro {
+    display: none;
+}
+
+.tiendaonline__container h2 {
+    padding-right: 10px;
+}
+
+.masvendidos__container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+justify-content: space-between;
+
+}
+
+.masvendidos__container--productos1 {
+    align-items: center;
+    justify-content: space-between;
+    width: 23%;
+    transition: all .9s ease;
+}
+
+.masvendidos__container--productos1:hover {
+    transform:scale(1.15) ;
+    cursor: pointer;
+}
+
+
+.masvendidos__container--productos1 img {
+    width: 100%;
+    height: 300px;
+}
+
+
+.masvendidos__container--productos1 h4 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.masvendidos__container--productos1 p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.masvendidos__container--productos1 button {
+    width: 100px;
+    height: 25px;
+    color: white;
+    background: black;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-left: 31%;
+}
+
+.masvendidos__container--productos1 button:hover {
+    cursor: pointer;
+    background-color: rgb(73, 73, 73);
+    border:2px solid rgb(73, 73, 73) ;
+  }
+
+.carrito__container {
+    height: auto;
+    width: 45%;
+    margin: auto;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.carrito__container--precio {
+   font-weight: 600;
+}
+
+.carrito__container h2 {
+    text-align: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.carrito__container button {
+    width: 100px;
+    height: 35px;
+    color: white;
+    background: black;
+    border-radius: 6px;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.carrito__container button:hover {
+    cursor: pointer;
+    background-color: rgb(73, 73, 73);
+    border:2px solid rgb(73, 73, 73) ;
+  }
+
+  .productoEnCarrito {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+#vaciar__carrito {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.pago__container {
+    flex-wrap: wrap;
+    height: auto;
+    width: 45%;
+    margin: auto;
+    font-size: 14px;
+}
+
+
+.pago__container h2 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 3%;
+}
+
+.pago__container--form {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.pago__container--form select {
+width: 170px;
+}
+
+.pago__container--form--cuotas {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.pago__container--form--cuotas select {
+    width: 170px;
+    }
+
+.pago__container--form--pago {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pago__container--form--pago input {
+    width: 170px;
+}
+
+.pago__container button {
+    width: 100px;
+    height: 35px;
+    color: white;
+    background: black;
+    border-radius: 6px;
+    justify-content: center;
+}
+
+.pago__container button:hover {
+    cursor: pointer;
+    background-color: rgb(73, 73, 73);
+    border:2px solid rgb(73, 73, 73) ;
+  }
+
+.formulario__container {
+    height: 330px;
+    width: 45%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.formulario__container h2 {
+    text-align: center;
+    padding-bottom: 7%;
+    padding-top: 7%;
+}
+
+.formulario__container form {
+    flex-wrap: wrap;
+}
+
+.formulario__container1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario__container--nombre {
+    width: 48%;
+}
+
+.formulario__container--nombre input {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+.formulario__container--email {
+    width: 48%;
+}
+
+.formulario__container--email input {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+.formulario__container--mensaje {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.formulario__container--mensaje input {
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+}
+
+
+.contacto__container {
+    display: flex;
+    justify-content: center;
+   padding-bottom: 19%;
+}
+
+  .contacto {
+    width: 70px;
+    height: 40px;
+    color: white;
+    background: black;
+    border-radius: 6px;
+    
+  }
+  
+  
+  .contacto:hover {
+    cursor: pointer;
+    background-color: rgb(73, 73, 73);
+    border:2px solid rgb(73, 73, 73) ;
+  }
+  
+
+footer {
+    background-color: black;
+}
+
+.footer {
+    height: auto;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.footer__img {
+    height: 80px;
+    width: 180px;
+}
+
+.footer__container {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container--wpp {
+    height: 27px;
+    width: 27x;
+}
+
+.footer__container--ig {
+    height: 35px;
+    width: 35px;
+}
+
+.footer span {
+    color: white;
+
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Amesti</title>
+</head>
+
+<body>
+    <header>
+        <div class="header" data-aos="fade-down" data-aos-once="true">
+            <div>
+                <img src="./assets/amesti.logo.jpg" alt="logo">
+            </div>
+
+            <nav>
+                <li>
+                    <a href="javascript: scrollNosotros();" class="nav__a">Nosotros</a>
+                    <a href="javascript: scrollNuestrosProductos();" class="nav__a">Nuestros productos</a>
+                    <a href="javascript: scrollTiendaOnline();" class="nav__a">Tienda online</a>
+                    <a href="javascript: scrollPagar();" class="nav__a">Pagar</a>
+                    <a href="javascript: scrollContacto();" class="nav__a">Contacto</a>
+                </li>
+            </nav>
+        </div>
+    </header>
+    <div class="inicio" data-aos="zoom-out">
+        <div class="inicio__titulo">
+            <h1>Welcome to <br /> Amesti</h1>
+        </div>
+    </div>
+
+    <section id='target1' class="nuestrosproductos__container">
+        <div class="nuestrosproductos__container--texto" data-aos="fade-right">
+            <h2>NOSOTROS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio dolorem officia neque. Consequuntur,
+                suscipit? Aperiam quia aliquid quos consequatur amet debitis totam dolor rem rerum quae, ipsum accusamus
+                sint!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae libero sequi labore dignissimos, ullam a
+                aliquam quisquam molestias? Fugit repellendus rem consequatur impedit suscipit eaque! Pariatur ab neque
+                iure sunt!</p>
+        </div>
+        <div class="nuestrosproductos__container--img" data-aos="fade-left">
+            <img src="./assets/galeria1.jpg" alt="carrousel">
+        </div>
+    </section>
+
+    <section id='target2' class="galeria__container">
+        <div class="galeria__container1" data-aos="fade-right"><img src="./assets/amesticasa1.jpg" alt="casa1"></div>
+        <div class="galeria__container2" data-aos="zoom-in"><img src="./assets/amesticasa2.jpg" alt="casa2"></div>
+        <div class="galeria__container3" data-aos="fade-left">
+            <div class="galeria__container3--1"><img src="./assets/amesticasa3.jpg" alt="casa3"></div>
+            <div class="galeria__container3--2"><img src="./assets/amesticasa4.jpg" alt="casa4"></div>
+        </div>
+    </section>
+
+    <div id='target3' class="tiendaonline__container" data-aos="fade-right" data-aos-once="true">
+        <h3>TIENDA ONLINE</h3>
+        <div>
+            <input type="text" name="buscador" id="buscador">
+        </div>
+    </div>
+    <main id="contenedor-productos" class="masvendidos__container">
+
+    </main>
+
+    <div class="carrito__container">
+        <h2>Tu Carrito de Compras</h2>
+
+        <div id="carrito__contenedor"></div>
+
+        <p class="carrito__container--precio">Precio Total: $<span id="precioTotal">0</span></p>
+        <button id="vaciar__carrito">Vaciar Carrito</button>
+    </div>
+
+    <section id='target4' class="pago__container" id="pago">
+        <h2>Haga su pago aquí</h2>
+        <form action="">
+            <div class="pago__container--form">
+                <label for="pago">Forma de pago</label>
+                <select name="pago" id="formaPago">
+                    <option value="debito">Débito</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="credito">Crédito</option>
+                </select>
+            </div>
+
+            <div class="pago__container--form--cuotas">
+                <label for="cuotas">Cantidad Cuotas</label>
+                <select name="cuotas" id="cuotas">
+                    <option value="una">Sin interés</option>
+                    <option value="tres">3 cuotas 10% de interés</option>
+                    <option value="seis">6 cuotas 15% de interés</option>
+                </select>
+            </div>
+            <span id="cuotaSeleccionada"></span>
+            <div class="pago__container--form--pago">
+                <label for="nroTarjeta">Número de Tarjeta</label>
+                <input type="numero" id="pagar">
+            </div>
+            <div>
+                <button type='button' id="botonCompra">Finalizar Compra</button>
+            </div>
+    </section>
+
+    <section id='target5' class="formulario__container">
+        <h2>Contactate con nosotros</h2>
+        <form action="">
+            <div class="formulario__container1">
+                <div class="formulario__container--nombre">
+                    <label for="">Nombre y Apellido</label>
+                    <br />
+                    <input type="text" id="nombre y apellido" placeholder="">
+                </div>
+
+                <div class="formulario__container--email">
+                    <label for="">E-mail</label>
+                    <br />
+                    <input type="text" id="e-mail" placeholder="E-mail">
+                </div>
+            </div>
+
+            <div class="formulario__container--mensaje">
+                <label for="">Dejanos tu mensaje</label>
+                <br />
+                <input type="text" id="dejanos tu mensaje" placeholder="">
+            </div>
+        </form>
+
+        <div class="contacto__container">
+            <button class="contacto" id="contacto">Enviar</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer">
+            <img class="footer__img" src="./assets/amesti.logo.jpg" alt="logo">
+            <div class="footer__container">
+                <img class="footer__container--wpp" src="./assets/whatsapp-negro-3.jpg" alt="wpp">
+                <img class="footer__container--ig" src="./assets/logoinstagram.jpg" alt="instagram">
+                <span>amestiuruguay@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500
+        });
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
