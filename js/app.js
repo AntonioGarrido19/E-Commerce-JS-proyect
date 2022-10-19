@@ -34,6 +34,8 @@ let buscadorProductos = document.getElementById('buscador');
 
 let finalizarCompra = document.getElementById('botonCompra');
 
+let amesti = document.getElementById('inicio')
+
 let nosotros = document.getElementById('target1');
 
 let nuestrosProductos = document.getElementById('target2');
@@ -49,6 +51,11 @@ let mail = document.getElementById('e-mail');
 let pago = document.getElementById('pagar')
 let carrito = [];
 
+
+function scrollAmesti() {
+    var llevame = amesti;
+    llevame.scrollIntoView({ behavior: 'smooth' });
+}
 
 function scrollNosotros() {
     var llevame = nosotros;

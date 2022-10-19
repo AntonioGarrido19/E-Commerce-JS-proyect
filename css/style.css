@@ -65,6 +65,7 @@ header img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    scroll-margin-top: 80px;
 }
 
 
@@ -88,6 +89,7 @@ header img {
     justify-content: space-between;
     height: 450px;
     position: relative;
+    scroll-margin-top: 80px;
 }
 
 .galeria__container1 {
@@ -137,6 +139,7 @@ header img {
     margin: auto;
     display: flex;
     align-items: center;
+    scroll-margin-top: 80px;
 }
 
 .tiendaonline__container input {
@@ -259,6 +262,7 @@ justify-content: space-between;
     width: 45%;
     margin: auto;
     font-size: 14px;
+    scroll-margin-top: 80px;
 }
 
 
@@ -319,6 +323,7 @@ width: 170px;
     margin: auto;
     padding-top: 40px;
     padding-bottom: 40px;
+    scroll-margin-top: 80px;
 }
 
 .formulario__container h2 {
