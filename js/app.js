@@ -96,8 +96,13 @@ botonContacto.addEventListener('click', mensajecontacto => {
 finalizarCompra.addEventListener('click', mensajecompra => {
     if(pago.value == ""){
     Swal.fire('Debe ingresar un número de tarjeta válido.')
+}else if (carrito == "") {
+    Swal.fire('Debe tener algún producto en el carrito.')
 } else {
     Swal.fire('El pago se ah realizado con éxito.')
+    localStorage.removeItem('carrito');
+    carrito.length = 0
+    actualizarCarrito();
 }
 })
 
@@ -125,7 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()
+    localStorage.removeItem('carrito');
+    actualizarCarrito();
 })
 
 function crearHtml(arr) {
@@ -192,3 +198,17 @@ let actualizarCarrito = () => {
 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
 }
+
+
+const hamburguer = document.querySelector (".ham");
+const navMenu = document.querySelector (".enlaces__nav__container");
+
+hamburguer.addEventListener("click", () => {
+    hamburguer.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav__a").forEach(n => n.addEventListener("click", () => {
+    hamburguer.classList.remove("active")
+    navMenu.classList.remove("active")
+}))

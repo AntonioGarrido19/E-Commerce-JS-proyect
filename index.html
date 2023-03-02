@@ -20,7 +20,8 @@
                 <a href="javascript: scrollAmesti();"><img src="./assets/amesti.logo.jpg" alt="logo"></a>
             </div>
 
-            <nav>
+            <nav class="nav">
+                <div class="enlaces__nav__container">
                 <li>
                     <a href="javascript: scrollNosotros();" class="nav__a">Nosotros</a>
                     <a href="javascript: scrollNuestrosProductos();" class="nav__a">Nuestros productos</a>
@@ -28,7 +29,16 @@
                     <a href="javascript: scrollPagar();" class="nav__a">Pagar</a>
                     <a href="javascript: scrollContacto();" class="nav__a">Contacto</a>
                 </li>
+                </div>
+
+                <div class="ham">
+                    <span class="br-1"></span>
+                    <span class="br-2"></span>
+                    <span class="br-3"></span>
+                </div>
+
             </nav>
+            
         </div>
     </header>
     <div class="inicio" data-aos="zoom-out">
@@ -87,7 +97,6 @@
                 <label for="pago">Forma de pago</label>
                 <select name="pago" id="formaPago">
                     <option value="debito">Débito</option>
-                    <option value="transferencia">Transferencia</option>
                     <option value="credito">Crédito</option>
                 </select>
             </div>
@@ -145,7 +154,7 @@
             <img class="footer__img" src="./assets/amesti.logo.jpg" alt="logo">
             <div class="footer__container">
                 <img class="footer__container--wpp" src="./assets/whatsapp-negro-3.jpg" alt="wpp">
-                <img class="footer__container--ig" src="./assets/logoinstagram.jpg" alt="instagram">
+                <a href="https://www.instagram.com/amestiuy/" target="_blank"><img class="footer__container--ig" src="./assets/logoinstagram.jpg" alt="instagram"></a>
                 <span>amestiuruguay@gmail.com</span>
             </div>
         </div>

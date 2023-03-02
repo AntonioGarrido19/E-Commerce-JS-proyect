@@ -14,15 +14,15 @@ body {
 
 header {
     background-color: black;
-    position: sticky;
-    position: -webkit-sticky;
+    position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 999;
+    width: 100%;
 }
 
 .header {
     height: 80px;
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -30,19 +30,50 @@ header {
 }
 
 header img {
+    padding-left: 5%;
     height: 80px;
     width: 180px;
 }
+
+.nav {
+    padding-right: 5%;
+}
+
 
 .nav__a {
     margin: 5px;
     color: white;
     font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav__a:hover{
+    color: rgb(192, 192, 192);
+}
+
+.ham {
+    display:none;
+    cursor:pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    background-color: transparent;
+}
+
+.ham span{
+    display:block;
+    background-color: white;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+    -webkit-transition: all 0.3s easse-in-out;
+    transition: all 0.3s easse-in-out;
 }
 
 .inicio {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     position: relative;
     background-image: url(../assets/imgfondo.jpg);
     background-size: cover;
@@ -435,5 +466,74 @@ footer {
 
 .footer span {
     color: white;
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow:hidden;
+    }
+
+    .ham {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 52px;
+    }
+
+    .ham.activate.bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .ham.activate.bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .ham.activate.bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 25px;
+    }
+
+    .enlaces__nav__container {
+        position:fixed;
+        left: -110vh;
+        top: 70px;
+        gap: 0;
+        display: flex;
+        background-color: black;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .enlaces__nav__container li {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav {
+        width: 100vh;
+    }
+
+    .nav__a {
+     margin: 25px 0;
+     width: 100vh;
+     flex-direction: column;
+     display: flex;
+        /* display: none; */
+    }
+
+    .enlaces__nav__container.active {
+        left:0;
+        width: 100%;
+        text-align: center;
+    }
 
 }
