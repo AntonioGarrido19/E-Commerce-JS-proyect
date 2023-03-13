@@ -48,7 +48,10 @@ let contacto = document.getElementById('target5');
 
 let mail = document.getElementById('e-mail');
 
-let pago = document.getElementById('pagar')
+let pago = document.getElementById('pagar');
+
+let contadorProductos = document.getElementById('contador');
+
 let carrito = [];
 
 
@@ -187,6 +190,7 @@ let actualizarCarrito = () => {
         let div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
+        <img src=${prod.img} alt="">
         <p>${prod.nombre}, precio: $${prod.precio}</p>
         <button onclick = "eliminarDelCarrito(${prod.id})">Eliminar del carrito</button>
         `

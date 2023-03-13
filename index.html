@@ -13,22 +13,54 @@
     <title>Amesti</title>
 </head>
 
-<body  id="inicio">
+<body id="inicio">
     <header>
         <div class="header" data-aos="fade-down" data-aos-once="true">
             <div>
-                <a href="javascript: scrollAmesti();"><img src="./assets/amesti.logo.jpg" alt="logo"></a>
+                <a href="javascript: scrollAmesti();"><img src="./assets/amesti.logo.jpg" alt="logo"
+                        class="header__img"></a>
             </div>
+
+            <div class="modal__icon__container">
+                <input type="checkbox" id="boton__modal">
+                <label for="boton__modal" class="label__modal"> <img src="./assets/carrito.jpg" alt="carrito"> </label>
+                <p class="contador__carrito" id="contador">0</p>
+            
+
+            <div class="modal">
+                <div class="modal__container">
+                    <div class="header__modal">
+                        <h3>Tu carrito de compras</h3>
+                    </div>
+                    <label for="boton__modal">X</label>
+                    <div class="modal__container__content">
+
+                        <div class="carrito__container">
+
+                            <div id="carrito__contenedor"></div>
+
+                            <p class="carrito__container--precio">Precio Total: $<span id="precioTotal">0</span></p>
+                           
+                            <div class="carrito__button__container">
+                            <button id="vaciar__carrito">Vaciar Carrito</button>
+                            <button id="ir__a__pagar">Pagar</button>
+                         </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <nav class="nav">
                 <div class="enlaces__nav__container">
-                <li>
-                    <a href="javascript: scrollNosotros();" class="nav__a">Nosotros</a>
-                    <a href="javascript: scrollNuestrosProductos();" class="nav__a">Nuestros productos</a>
-                    <a href="javascript: scrollTiendaOnline();" class="nav__a">Tienda online</a>
-                    <a href="javascript: scrollPagar();" class="nav__a">Pagar</a>
-                    <a href="javascript: scrollContacto();" class="nav__a">Contacto</a>
-                </li>
+                    <li>
+                        <a href="javascript: scrollNosotros();" class="nav__a">Nosotros</a>
+                        <a href="javascript: scrollNuestrosProductos();" class="nav__a">Nuestros productos</a>
+                        <a href="javascript: scrollTiendaOnline();" class="nav__a">Tienda online</a>
+                        <a href="javascript: scrollPagar();" class="nav__a">Pagar</a>
+                        <a href="javascript: scrollContacto();" class="nav__a">Contacto</a>
+                    </li>
                 </div>
 
                 <div class="ham">
@@ -38,9 +70,11 @@
                 </div>
 
             </nav>
-            
+
         </div>
     </header>
+
+
     <div class="inicio" data-aos="zoom-out">
         <div class="inicio__titulo">
             <h1>Welcome to <br /> Amesti</h1>
@@ -81,14 +115,6 @@
 
     </main>
 
-    <div class="carrito__container">
-        <h2>Tu Carrito de Compras</h2>
-
-        <div id="carrito__contenedor"></div>
-
-        <p class="carrito__container--precio">Precio Total: $<span id="precioTotal">0</span></p>
-        <button id="vaciar__carrito">Vaciar Carrito</button>
-    </div>
 
     <section id='target4' class="pago__container" id="pago">
         <h2>Haga su pago aquí</h2>
@@ -154,7 +180,8 @@
             <img class="footer__img" src="./assets/amesti.logo.jpg" alt="logo">
             <div class="footer__container">
                 <img class="footer__container--wpp" src="./assets/whatsapp-negro-3.jpg" alt="wpp">
-                <a href="https://www.instagram.com/amestiuy/" target="_blank"><img class="footer__container--ig" src="./assets/logoinstagram.jpg" alt="instagram"></a>
+                <a href="https://www.instagram.com/amestiuy/" target="_blank"><img class="footer__container--ig"
+                        src="./assets/logoinstagram.jpg" alt="instagram"></a>
                 <span>amestiuruguay@gmail.com</span>
             </div>
         </div>
