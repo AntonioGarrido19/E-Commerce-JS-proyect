@@ -34,7 +34,9 @@ let buscadorProductos = document.getElementById('buscador');
 
 let finalizarCompra = document.getElementById('botonCompra');
 
-let amesti = document.getElementById('inicio')
+let amesti = document.getElementById('inicio');
+
+let botonPagarModal = document.getElementById('ir__a__pagar');
 
 let nosotros = document.getElementById('target1');
 
@@ -52,8 +54,17 @@ let pago = document.getElementById('pagar');
 
 let contadorProductos = document.getElementById('contador');
 
+let pagarModal = document.getElementById('target4');
+
+let modalOut = document.getElementById('boton__modal')
+
 let carrito = [];
 
+
+let llevameModal = function () {
+    var llevame = pagarModal;
+    llevame.scrollIntoView({ behavior: 'smooth' });
+}
 
 function scrollAmesti() {
     var llevame = amesti;
@@ -163,6 +174,8 @@ function crearHtml(arr) {
             }).showToast();
         })
     });
+
+
 }
 
 // crearHtml(productos);
@@ -201,6 +214,8 @@ let actualizarCarrito = () => {
     })
 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+
+    contadorProductos.innerText = carrito.length
 }
 
 
@@ -216,3 +231,23 @@ document.querySelectorAll(".nav__a").forEach(n => n.addEventListener("click", ()
     hamburguer.classList.remove("active")
     navMenu.classList.remove("active")
 }))
+
+
+ function cerrarModal () {
+    modalOut.checked = false;
+ }
+
+botonPagarModal.addEventListener('click', mensajepago => {
+    if(carrito == ""){
+    Swal.fire('Debe tener algún producto en el carrito.')
+}else llevameModal()
+})
+
+
+
+botonPagarModal.addEventListener('click', cierro => {
+    if(carrito != ""){
+        cerrarModal()
+    }else console.log("no tiene productos")
+})
+

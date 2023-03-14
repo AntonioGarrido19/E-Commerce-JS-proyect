@@ -82,6 +82,7 @@ header img {
     align-items: center;
 }
 
+
 .modal {
     position: fixed;
     top: 0;
@@ -275,7 +276,7 @@ justify-content: space-between;
 }
 
 .masvendidos__container--productos1:hover {
-    transform:scale(1.15) ;
+    transform:scale(1.05) ;
     cursor: pointer;
 }
 
