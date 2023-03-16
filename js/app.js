@@ -34,6 +34,8 @@ let buscadorProductos = document.getElementById('buscador');
 
 let finalizarCompra = document.getElementById('botonCompra');
 
+let precioFinal = document.getElementById('total__a__pagar');
+
 let amesti = document.getElementById('inicio');
 
 let botonPagarModal = document.getElementById('ir__a__pagar');
@@ -216,6 +218,8 @@ let actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
 
     contadorProductos.innerText = carrito.length
+
+    precioFinal.innerText = `Valor en USD: $${carrito.reduce((acc, prod) => acc + prod.precio, 0)}`
 }
 
 

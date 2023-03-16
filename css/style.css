@@ -414,12 +414,23 @@ width: 170px;
     width: 170px;
 }
 
+.total__pago {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .pago__container button {
     width: 100px;
     height: 35px;
     color: white;
     background: black;
     border-radius: 6px;
+    justify-content: center;
+}
+
+.botonCompra__container {
+    display: flex;
     justify-content: center;
 }
 
