@@ -8,8 +8,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
 body {
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 header {
@@ -96,6 +98,7 @@ header img {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 }
 
 #boton__modal:checked ~ .modal{
@@ -111,6 +114,11 @@ box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
 transition: all 500ms ease;
 position: relative;
 
+}
+
+.modal__container__content {
+    max-height: 425px;
+    overflow-y: scroll;
 }
 
 .header__modal {
@@ -571,7 +579,7 @@ footer {
         display: block;
         position: absolute;
         top: 15px;
-        right: 52px;
+        right: 60px;
     }
 
     .ham.activate.bar:nth-child(2){
@@ -587,9 +595,9 @@ footer {
     }
 
     .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-bottom: 25px;
+        
+        align-items: center;
+        
     }
 
     .enlaces__nav__container {

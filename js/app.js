@@ -123,6 +123,7 @@ finalizarCompra.addEventListener('click', mensajecompra => {
 })
 
 function filtrarPorNombre(arr, filtro) {
+    filtro = filtro.toLowerCase();
     return arr.filter(el => {
         return el.nombre.toLowerCase().includes(filtro)
     })
@@ -246,8 +247,6 @@ botonPagarModal.addEventListener('click', mensajepago => {
     Swal.fire('Debe tener algún producto en el carrito.')
 }else llevameModal()
 })
-
-
 
 botonPagarModal.addEventListener('click', cierro => {
     if(carrito != ""){
