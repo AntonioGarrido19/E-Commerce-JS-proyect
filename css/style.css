@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    position: relative;
     
 }
 
@@ -157,6 +158,7 @@ position: relative;
     height: 100vh;
     position: relative;
     background-image: url(../assets/imgfondo.jpg);
+    object-fit: cover;
     background-size: cover;
 }
 
@@ -164,9 +166,12 @@ position: relative;
     display: flex;
     align-items: center;
     height: 100%;
-    padding-right: 8%;
     justify-content: flex-end;
     font-size: 2.5rem;
+}
+
+.inicio__titulo h1 {
+    padding-right: 8%;
 }
 
 .nuestrosproductos__container {
@@ -266,46 +271,65 @@ position: relative;
     padding-right: 10px;
 }
 
-.masvendidos__container {
-    padding-top: 30px;
-    padding-bottom: 50px;
-    width: 90%;
-    margin: auto;
-    display: flex;
-justify-content: space-between;
-
+.carousel {
+    position: relative;
+    padding: 3% 5%;
 }
 
-.masvendidos__container--productos1 {
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 23%;
     transition: all .9s ease;
 }
 
-.masvendidos__container--productos1:hover {
+.swiper-slide:hover {
     transform:scale(1.05) ;
     cursor: pointer;
 }
 
 
-.masvendidos__container--productos1 img {
+.swiper-slide img {
     width: 100%;
     height: 300px;
 }
 
 
-.masvendidos__container--productos1 h4 {
+.swiper-slide h4 {
     text-align: center;
     margin-bottom: 10px;
 }
 
-.masvendidos__container--productos1 p {
+.swiper-slide p {
     font-size: 12px;
     text-align: center;
 }
 
-.masvendidos__container--productos1 button {
+.swiper-slide button {
     width: 100px;
     height: 25px;
     color: white;
@@ -313,13 +337,20 @@ justify-content: space-between;
     border-radius: 6px;
     margin-top: 5px;
     font-size: 12px;
-    margin-left: 31%;
 }
 
-.masvendidos__container--productos1 button:hover {
+.swiper-slide button:hover {
     cursor: pointer;
     background-color: rgb(73, 73, 73);
     border:2px solid rgb(73, 73, 73) ;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
   }
 
 .carrito__container {
@@ -619,7 +650,7 @@ footer {
     }
 
     .nav {
-        width: 100vh;
+        width: 30%;
     }
 
     .nav__a {
@@ -636,4 +667,20 @@ footer {
         text-align: center;
     }
 
+    .inicio__titulo h1 {
+        text-align: center;
+    }
+
+
+    .pago__container {
+        width: 65%;
+    }
+
+    .formulario__container {
+        width: 65%;
+    }
+
+    .footer__container {
+        width: 55%;
+    }
 }

@@ -8,6 +8,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 
     <title>Amesti</title>
@@ -25,6 +26,7 @@
                 <input type="checkbox" id="boton__modal">
                 <label for="boton__modal" class="label__modal"> <img src="./assets/carrito.jpg" alt="carrito"> </label>
                 <span class="contador__carrito" id="contador">0</span>
+           
             
 
             <div class="modal" id="modal1">
@@ -111,9 +113,15 @@
             <input type="text" name="buscador" id="buscador">
         </div>
     </div>
-    <main id="contenedor-productos" class="masvendidos__container">
-
-    </main>
+    <div class="carousel">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+           
+            </div>
+        </div>
+     </div>
 
 
     <section id='target4' class="pago__container" id="pago">
@@ -201,7 +209,9 @@
             duration: 1500
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
+    
 </body>
 
 </html>

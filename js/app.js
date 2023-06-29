@@ -1,8 +1,3 @@
-//   const productos = [
-//      { id: 1, nombre: "corner 650", precio: 750, img: "./assets/corner650.jpg" },
-//      { id: 2, nombre: "classic 500 rojo italiano", precio: 900, img: "./assets/estufa-a-lena-amesti-classic-500-rojo-italiano.jpg" },     { id: 3, nombre: "rondo 440", precio: 700, img: "./assets/rondo-440.jpg" },
-//      { id: 4, nombre: "cubic 380", precio: 900, img: "./assets/amesti-cubic380.jpg" },
-//   ]
 
 const productos = [];
 console.log(productos);
@@ -17,10 +12,9 @@ const respuesta = async () => {
 }
 respuesta();
 
-
 let contenedorCarrito = document.getElementById('carrito__contenedor');
 
-let contenedorProductos = document.getElementById('contenedor-productos');
+let container = document.querySelector('.swiper-wrapper');
 
 let botonVaciar = document.getElementById('vaciar__carrito');
 
@@ -154,7 +148,7 @@ botonVaciar.addEventListener('click', () => {
 function crearHtml(arr) {
     arr.forEach((producto) => {
         let div = document.createElement('div')
-        div.classList.add('masvendidos__container--productos1')
+        div.classList.add('swiper-slide')
         div.innerHTML = `
     <img src=${producto.img} alt="">
     <h4>${producto.nombre}</h4>
@@ -162,7 +156,7 @@ function crearHtml(arr) {
     <button id="agregar${producto.id}">Agregar al carrito</button>
     `
 
-        contenedorProductos.appendChild(div)
+        container.appendChild(div)
 
         let button = document.getElementById(`agregar${producto.id}`)
 
@@ -177,11 +171,8 @@ function crearHtml(arr) {
             }).showToast();
         })
     });
-
-
 }
 
-// crearHtml(productos);
 
 
 let agregar = (prodId) => {
@@ -253,4 +244,13 @@ botonPagarModal.addEventListener('click', cierro => {
         cerrarModal()
     }else console.log("no tiene productos")
 })
+
+var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 4,
+    spaceBetween: 20,
+  });
 
