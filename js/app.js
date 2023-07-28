@@ -126,9 +126,9 @@ function filtrarPorNombre(arr, filtro) {
 buscadorProductos.addEventListener('input', () => {
     let nuevoFiltro = filtrarPorNombre(productos, buscadorProductos.value)
 
-    contenedorProductos.innerHTML = "";
-    crearHtml(nuevoFiltro);
-    console.log(nuevoFiltro);
+     container.innerHTML = "";
+     crearHtml(nuevoFiltro);
+     swiper.update();
 })
 
 
@@ -165,8 +165,8 @@ function crearHtml(arr) {
             Toastify({
                 text: "Producto agregado con éxito",
                 offset: {
-                    x: 1000, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                    y: 40 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                    x: 1000, 
+                    y: 40 
                 },
             }).showToast();
         })
@@ -245,12 +245,31 @@ botonPagarModal.addEventListener('click', cierro => {
     }else console.log("no tiene productos")
 })
 
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     slidesPerView: 4,
     spaceBetween: 20,
+
+    breakpoints:{
+        100: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+        },
+        920: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+    }
   });
 
