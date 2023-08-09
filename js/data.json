@@ -22,23 +22,5 @@
       "nombre":"Cubic 380",
       "precio":900,
       "img":"./assets/amesti-cubic380.jpg"
-   },
-    {
-      "id":5,
-      "nombre":"Corner 650",
-      "precio":750,
-      "img":"./assets/corner650.jpg"
-   },
-   {
-      "id":6,
-      "nombre":"Cubic 380",
-      "precio":900,
-      "img":"./assets/amesti-cubic380.jpg"
-   },
-   {
-      "id":7,
-      "nombre":"Classic 500",
-      "precio":900,
-      "img":"./assets/estufa-a-lena-amesti-classic-500-rojo-italiano.jpg"
    }
  ]
