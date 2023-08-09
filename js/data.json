@@ -25,21 +25,21 @@
    },
    {
       "id":5,
-      "nombre":"Corner 650",
-      "precio":750,
-      "img":"./assets/corner650.jpg"
+      "nombre":"Inserto palladio 800",
+      "precio":1050,
+      "img":"./assets/inserto-800-palladio.jpg"
    },
    {
       "id":6,
-      "nombre":"Cubic 380",
-      "precio":900,
-      "img":"./assets/amesti-cubic380.jpg"
+      "nombre":"Pellets Blanca",
+      "precio":1500,
+      "img":"./assets/pellets-blanca.jpg"
    },
    {
       "id":7,
-      "nombre":"Classic 500",
-      "precio":900,
-      "img":"./assets/estufa-a-lena-amesti-classic-500-rojo-italiano.jpg"
+      "nombre":"Pellets Roja",
+      "precio":1500,
+      "img":"./assets/pellet-modelo-1.webp"
    }
 
  ]
